@@ -1,0 +1,30 @@
+{
+  "name": "first-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "chrome": "npx playwright test --project=chromium --headed --retries 1",
+    "safari": "npx playwright test --project=webkit --headed",
+    "firefox": "npx playwright test --project=firefox --headed",
+    "parallel": "npx playwright test --headed",
+
+    "parallel:test": "npx playwright test",
+    "chrome:test": "npx playwright test --project=chromium",
+    "safari:test": "npx playwright test --project=webkit",
+    "firefox:test": "npx playwright test --project=firefox",
+
+    "timeTravel:test": "npx playwright test --ui",
+    "debug:test": "npx playwright test --debug --project=chromium",
+    "codegen:test": "npx playwright codegen", 
+    "posttest": "npx playwright show-report",
+    "Mobile:safari": "npx playwright test --project=Mobile Safari --headed --retries 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.0"
+  }
+}
